@@ -7,7 +7,11 @@ import { JwtModule } from '@nestjs/jwt';
 import { UserResolver } from './user.resolver';
 
 @Module({
-  imports: [MongooseModule.forFeature([{name: User.name, schema: UserSchema}]), HashModule, JwtModule],
+  imports: [
+    MongooseModule.forFeature([{ name: User.name, schema: UserSchema }]),
+    HashModule,
+    JwtModule,
+  ],
   providers: [UserService, UserResolver],
 })
 export class UserModule {}

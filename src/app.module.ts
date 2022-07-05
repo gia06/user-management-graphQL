@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
 import { UserModule } from './user/user.module';
 import { HashModule } from './hash/hash.module';
-import {MongooseModule} from '@nestjs/mongoose';
+import { MongooseModule } from '@nestjs/mongoose';
 import { GraphQLModule } from '@nestjs/graphql';
-import {ApolloDriverConfig, ApolloDriver} from '@nestjs/apollo';
-import 'dotenv/config'
+import { ApolloDriverConfig, ApolloDriver } from '@nestjs/apollo';
+import 'dotenv/config';
 
 @Module({
   imports: [
@@ -13,8 +13,8 @@ import 'dotenv/config'
       autoSchemaFile: true,
       driver: ApolloDriver,
     }),
-    UserModule, 
-    HashModule
+    UserModule,
+    HashModule,
   ],
   controllers: [],
   providers: [],

@@ -1,4 +1,4 @@
 interface Hash {
-    hash: string;
-    salt?: string;
+  hash: string;
+  salt?: string;
 }
