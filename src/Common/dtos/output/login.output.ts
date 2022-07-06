@@ -1,13 +1,13 @@
 import { Field, ObjectType } from '@nestjs/graphql';
-import { IsString } from 'class-validator';
+import { IsNotEmpty } from 'class-validator';
 
 @ObjectType()
 export class LoginOutput {
   @Field(() => String)
-  @IsString()
+  @IsNotEmpty()
   message: string;
 
   @Field()
-  @IsString()
+  @IsNotEmpty()
   token: string;
 }

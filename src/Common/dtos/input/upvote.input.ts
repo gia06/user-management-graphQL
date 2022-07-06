@@ -1,13 +1,13 @@
 import { InputType, Field } from '@nestjs/graphql';
-import { IsString } from 'class-validator';
+import { IsNotEmpty } from 'class-validator';
 
 @InputType()
 export class VoteInput {
   @Field()
-  @IsString()
+  @IsNotEmpty()
   token: string;
 
   @Field()
-  @IsString()
+  @IsNotEmpty()
   nickname: string;
 }
